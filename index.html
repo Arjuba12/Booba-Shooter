@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoot The Ball</title>
+  </head>
+  <link
+    href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+
+  <style>
+    body{
+        margin: 0;
+        background-color: black;
+    }
+  </style>
+
+  <audio src="./asset/bgm.mp3" loop id="bgm"></audio>
+
+  <body
+    style="
+      margin: 0;
+      overscroll-behavior: none;
+      overflow: hidden;
+      overflow-x: hidden;
+      user-select: none;
+    "
+  >
+    <div class="fixed text-white text-sm ml-2" ><span>Score:</span> <span id="score-el">0</span></div>
+
+    <div class="fixed inset-0 flex items-center justify-center" id="menuEl">
+        <div class="bg-white max-w-md w-full p-6 text-center max-h-md">
+            <h1 class="text-4xl font-bold leading-none" id="big-score-el">0</h1>
+            <p class="text-sm-bold text-gray-700 mb-4 py-1">Point</p>
+
+            <div>
+                <button class="bg-blue-500 text-white w-full py-3 rounded-full text-sm" id="start-button">
+                    Start Game</button>
+            </div>
+        </div>
+    </div>
+    <canvas> </canvas>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
