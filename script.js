@@ -8,7 +8,7 @@ const c = canvas.getContext("2d");
 
 canvas.width = innerWidth;
 canvas.height = innerHeight;
-
+bgm.volume = 0.6;
 const scoreEl = document.querySelector('#score-el')
 
 class Player {
