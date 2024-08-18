@@ -4,7 +4,10 @@ const startGame = document.querySelector("#start-button")
 const menuEl = document.querySelector("#menuEl")
 const bigScoreEl = document.querySelector("#big-score-el")
 const bgm = document.querySelector("#bgm")
+const impactSfx = document.querySelector("#impac-sfx")
+const fireSfx = document.querySelector("#fire-sfx")
 const c = canvas.getContext("2d");
+
 
 canvas.width = innerWidth;
 canvas.height = innerHeight;
@@ -205,6 +208,8 @@ function animate() {
 
       // projectile colide enemy
       if (dist - enemy.radius - projectile.radius < 1){
+        impactSfx.currentTime = 0;
+        impactSfx.play();
 
       // manambahkan score
         score += 10;
@@ -248,6 +253,8 @@ function animate() {
 }
 
 canvas.addEventListener("click", (event) => {
+  fireSfx.currentTime = 0;
+  fireSfx.play();
   console.log(projectiles);
   const angle = Math.atan2(
     event.clientY - canvas.height / 2,
